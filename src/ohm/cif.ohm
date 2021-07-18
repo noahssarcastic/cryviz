@@ -1,0 +1,46 @@
+// CIF v1.1
+CIF1 {
+    // Basic Structure
+    cif = comments? whiteSpace? ( dataBlock ( whiteSpace dataBlock )* whiteSpace?)?
+    dataBlock = dataBlockHeading ( whiteSpace (dataItems | saveFrame) )*
+    dataBlockHeading =
+    saveFrame =
+    saveFrameHeading =
+    dataItems =
+    loopHeader =
+    loopBody =
+
+    // Reserved Words
+    reservedDATA_ =
+    reservedLOOP_ =
+    reservedGLOBAL_ =
+    reservedSAVE_ =
+    reservedSTOP_ =
+
+    // Tags and Values
+    tag = 
+    value = 
+
+    // Numeric Values
+    numeric = 
+    number = 
+    integer = 
+    float = 
+    exponent = 
+    unsignedInteger = 
+    digit = 
+
+    // Character Strings and Text Fields
+    // ? 
+
+    // WHiteSpace and Comments
+    comments = ( '#' anyPrintChar* endOfLine )+
+    whiteSpace = ( space | tokenizedComments )+
+    tokenizedComments =
+
+    // Character Sets
+    anyPrintChar =
+
+    // Misc.
+    endOfLine = "\r"? "\n"
+}
